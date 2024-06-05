@@ -30,6 +30,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import SideBar from "@/components/layout/side"
+import { ThemeToggle } from "@/components/theme/toggle"
 
 export default function AppLayout({
     children,
@@ -121,7 +122,7 @@ export default function AppLayout({
           <div className="w-full flex-1">
             <form>
               <div className="relative">
-                {"<>"}
+                <ThemeToggle />
               </div>
             </form>
           </div>

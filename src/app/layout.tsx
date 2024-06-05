@@ -19,7 +19,8 @@ export default function RootLayout(props: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ContextProvider>{props.children}</ContextProvider>
+        <ContextProvider>
+          {props.children}</ContextProvider>
       </body>
     </html>
   )
