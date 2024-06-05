@@ -27,3 +27,12 @@ You can check out the [create-t3-app GitHub repository](https://github.com/t3-os
 ## How do I deploy this?
 
 Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+
+
+TODO:
+
+- [ ] Figure out how to implement next-auth with SIWE. What strategy  (jwt vs database) should be used? etc.
+        see: https://github.com/hone1er/honefolio/blob/main/src/server/auth.ts
+
+- [ ] Implement the SIWE API including nonce generation for Smart wallets
+        see: https://www.smartwallet.dev/guides/siwe
