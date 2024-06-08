@@ -2,7 +2,7 @@
 
 This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
 
-As a boilerplate, it aims to provide a simple starting point for your next on-chain app.
+As a boilerplate, it aims to provide a simple starting point for your next [on-chain app](https://onchainkit.xyz/) 
 
 ## What's next? How do I make an app with this?
 
