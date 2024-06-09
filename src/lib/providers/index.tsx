@@ -3,6 +3,9 @@
 import { config } from "@/server/wagmi"
 import { useState, type ReactNode } from 'react'
 
+import { base } from 'viem/chains';
+import { OnchainKitProvider } from '@coinbase/onchainkit';
+
 
 import { WagmiProvider } from 'wagmi'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
@@ -15,12 +18,14 @@ export function ContextProvider(props: { children: ReactNode }) {
 
   return (
     <WagmiProvider config={config}>
-      <QueryClientProvider client={queryClient}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-            {props.children}
-            <ProgressBar height="4px" color="#fffd00" options={{ showSpinner: false }} shallowRouting />
-        </ThemeProvider>
-      </QueryClientProvider>
+      <OnchainKitProvider chain={base}>
+        <QueryClientProvider client={queryClient}>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+              {props.children}
+              <ProgressBar height="4px" color="#fffd00" options={{ showSpinner: false }} shallowRouting />
+          </ThemeProvider>
+        </QueryClientProvider>
+      </OnchainKitProvider>
     </WagmiProvider>
   )
 }
